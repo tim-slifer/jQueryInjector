@@ -60,16 +60,18 @@ let options = {
     'alwaysInjectURLs': []
 };
 
-// Handle context menu click
-function contextMenu_onclick(info, tab) {
-    chrome.tabs.sendMessage(tab.id, { "function": "inject" });
-}
+// Handle context menu click using onClicked event listener
+chrome.contextMenus.onClicked.addListener((info, tab) => {
+    if (info.menuItemId === "jqueryInjector") {
+        chrome.tabs.sendMessage(tab.id, { "function": "inject" });
+    }
+});
 
 // Create the context menu
 chrome.contextMenus.create({
+    "id": "jqueryInjector",
     "title": "jQuery Injector",
-    "contexts": ["all"],
-    "onclick": contextMenu_onclick
+    "contexts": ["all"]
 });
 
 // Handle tab updates (similar to V2)
