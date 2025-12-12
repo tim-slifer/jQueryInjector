@@ -1,53 +1,71 @@
 body {
-	background: url('../imgs/background.png');
-	margin-top: 8%;
+    background: url("../imgs/background.png");
+    margin-top: 8%;
 }
 
 body label {
-	color: #d3d3d3;
+    color: #d3d3d3;
 }
 
 #inject {
-	min-width: 175px;
+    min-width: 175px;
 }
 
 body table td {
-	color: #d3d3d3;
+    color: #d3d3d3;
 }
 
 tbody tr:first-child {
-	border-bottom: 1px solid #E1E1E1;
+    border-bottom: 1px solid #e1e1e1;
 }
 
 tbody td {
-	border-bottom: 0px solid;
+    border-bottom: 0px solid;
 }
 
 td:first-child {
-	width: 90%;
+    width: 90%;
 }
 
 img {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 #URLTable {
-	width: 100%;
-	table-layout: fixed;
+    width: 100%;
+    table-layout: fixed;
 }
 
 .always-inject-list {
-	max-height: 360px; 
-	overflow: scroll;
+    max-height: 360px;
+    overflow: scroll;
 }
 
 .about-text {
-	border-radius: 4px;
-    border: 1px solid #bbb;
+    border-radius: 4px;
+    border: 1px solid #bbbbbb;
     padding: 5px;
     color: #d3d3d3;
 }
 
 .small-margin-top {
-	margin-top: 5%;
+    margin-top: 5%;
+}
+
+/* Minimal fix for table overflow */
+.always-inject-list {
+    overflow: visible;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.always-inject-list table {
+    width: 100%;
+    table-layout: fixed;
+    box-sizing: border-box;
+}
+
+.always-inject-list td {
+    box-sizing: border-box;
+    word-wrap: break-word;
 }
