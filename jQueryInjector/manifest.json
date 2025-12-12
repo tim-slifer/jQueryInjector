@@ -37,5 +37,15 @@
       "all_frames": true,
       "run_at": "document_end"
     }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "scripts/jquery-3.6.4.min.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
   ]
 }

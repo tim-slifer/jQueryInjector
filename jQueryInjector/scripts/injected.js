@@ -1,5 +1,5 @@
 var options = {
-    'jQueryURL': '//code.jquery.com/jquery-3.5.0.min.js',
+    'jQueryURL': chrome.runtime.getURL('scripts/jquery-3.6.4.min.js'),
     'deleteOtherReferences': false
 };
 
@@ -47,7 +47,7 @@ function safe_inject() {
 }
 
 /*!
- * To prevent a race condition when automatically injecting, we have to initialise values when we get a message
+ * To prevent a race condition when automatically injecting, we have to initialize values when we get a message
  * instead of on content-script load as we normally would.
  */
 chrome.runtime.onMessage.addListener(function (message) {

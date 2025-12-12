@@ -3,17 +3,17 @@
 <head>
     <meta charset="utf-8">
     <title>jQuery Injector Options</title>
-
+    
     <meta name="description" content="">
     <meta name="author" content="">
-
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" type="text/css" href="../css/fonts.css" />
-
-    <link rel="stylesheet" type="text/css" href="../css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="../css/skeleton.css" />
-    <link rel="stylesheet" type="text/css" href="../css/settings.css" />
+    
+    <link rel="stylesheet" type="text/css" href="../css/fonts.css"/>
+    
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/skeleton.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/settings.css"/>
 </head>
 
 <body>
@@ -21,32 +21,33 @@
     <div class="row">
         <div class="seven columns">
             <div class="row">
-                <div class="nine columns">
-                    <label for="jQueryURLInput">jQuery URL</label>
-                    <input class="u-full-width" type="text" placeholder="//code.jquery.com/jquery-3.5.0.min.js" id="jQueryURLInput" />
+                <div class="nine columns about-text">
+                    <h6>jQuery Version</h6>
+                    <p><strong>Bundled jQuery 3.6.4</strong> - Optimized for compatibility and performance. Works on all
+                        websites including those with strict security policies.</p>
                 </div>
                 <div class="three columns">
-                    <!-- Ugly hack but quickest way to ensure alignment-->
-                    <label for="saveSettings" style="visibility: hidden;">Save</label>
-                    <button class="u-full-width button-primary" id="saveSettings">Save</button>
                 </div>
             </div>
             <div class="row">
                 <label>
-                    <input id="deleteOtherReferences" type="checkbox" />
+                    <input id="deleteOtherReferences" type="checkbox"/>
                     <span>On injection, delete other jQuery references</span>
                 </label>
             </div>
             <div class="row small-margin-top">
                 <div class="always-inject-list">
                     <table class="u-full-width" id="URLTable">
-                        <tr><td>Always Inject</td><td></td></tr>
+                        <tr>
+                            <td>Always Inject</td>
+                            <td></td>
+                        </tr>
                     </table>
                 </div>
             </div>
             <div class="row small-margin-top">
                 <div class="nine columns">
-                    <input class="u-full-width" type="text" placeholder="Full page URL or part" id="URLtoAdd" />
+                    <input class="u-full-width" type="text" placeholder="Full page URL or part" id="URLtoAdd"/>
                 </div>
                 <div class="three columns">
                     <button class="u-full-width" id="addURL">Add</button>
@@ -56,13 +57,13 @@
         <div class="five columns about-text">
             <h5>About</h5>
             <p>
-                jQuery Injector allows you to inject jQuery into every frame on a page so that you can use jQuery in the dev console.<br><br>
-                <strong>jQuery URL</strong><br>
-                A non-protocol encoded URL to the version of jQuery you want to use. A list can be found <a href="https://code.jquery.com/jquery/">here.</a><br><br>
+                jQuery Injector allows you to inject jQuery into every frame on a page so that you can use jQuery in the
+                dev console.<br><br>
                 <strong>Always Inject</strong><br>
-                Can either be a full URL (e.g., https://www.google.com) or part of a URL (e.g., "test" would match https://www.google.com/test, http://www.test.com, etc.). jQuery will be automatically injected after the DOM completes.<br><br>
-                <strong>Notes</strong><br>
-                Firewalls (like uMatrix) will block jQuery from loading until you allow code.jquery.com to load scripts on that domain.<br>
+                Can either be a full URL (e.g., https://www.google.com) or part of a URL (e.g., "test" would match
+                https://www.google.com/test, http://www.test.com, etc.). jQuery will be automatically injected after the
+                DOM completes.<br><br>
+                
                 Background by Carlos Aguilar.
             </p>
         </div>

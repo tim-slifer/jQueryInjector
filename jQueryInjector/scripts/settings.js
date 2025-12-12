@@ -1,5 +1,5 @@
 var options = {
-    'jQueryURL': '//code.jquery.com/jquery-3.5.0.min.js',
+    'jQueryURL': chrome.runtime.getURL('scripts/jquery-3.6.4.min.js'),
     'alwaysInjectURLs': [],
     'deleteOtherReferences': false
 };
@@ -25,20 +25,17 @@ chrome.storage.local.get(options, function (items) {
         options[key] = items[key];
     }
 
-    document.getElementById('jQueryURLInput').value = options["jQueryURL"];
+    // Initialize jQuery URL with bundled version if not set
+    if (!items.jQueryURL || items.jQueryURL.includes('code.jquery.com')) {
+        options.jQueryURL = chrome.runtime.getURL('scripts/jquery-3.6.4.min.js');
+        chrome.storage.local.set({ jQueryURL: options.jQueryURL });
+    }
+
     document.getElementById('deleteOtherReferences').checked = options["deleteOtherReferences"];
 
     for (let url in options['alwaysInjectURLs']) {
         add_row_to_url_table(options['alwaysInjectURLs'][url]);
     }
-
-    document.getElementById('saveSettings').onclick = function () {
-        chrome.storage.local.set({ jQueryURL: document.getElementById('jQueryURLInput').value });
-        document.getElementById('saveSettings').textContent = "SAVED ✓";
-        setTimeout(function () {
-            document.getElementById('saveSettings').textContent = "SAVE";
-        }, 1000);
-    };
 
     document.getElementById('deleteOtherReferences').onclick = function () {
         chrome.storage.local.set({ deleteOtherReferences: document.getElementById('deleteOtherReferences').checked });
