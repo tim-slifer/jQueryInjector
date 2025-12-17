@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "jQuery Injector",
   "short_name": "jQueryInjector",
-  "version": "1.1.2",
+  "version": "2.0.0",
   "description": "Inject jQuery into all frames on any page.",
   "icons": {
     "16": "imgs/logo16.png",
