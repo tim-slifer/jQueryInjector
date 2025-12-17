@@ -1,23 +1,31 @@
 # jQuery Injector
+
 ![Settings screenshot](/promos/promo_1.png?raw=true "Settings")
 
-[Play Store](https://chrome.google.com/webstore/detail/jquery-injector/ekkjohcjbjcjjifokpingdbdlfekjcgi "Play Store")
+[Chrome Web Store](https://chrome.google.com/webstore/detail/jquery-injector/ekkjohcjbjcjjifokpingdbdlfekjcgi "Chrome Web Store")
 
 ### About
-jQuery Injector allows you to inject jQuery into every frame on a page so that you can use jQuery in the dev console. 
+
+jQuery Injector injects jQuery onto each frame of a page, making jQuery available and usable in the dev console. QA
+Engineers crafting and testing CSS Selectors with Sizzle/jQuery pseudo-classes for test automation, as well as
+developers doing sandbox work, may find
+this tool useful.
 
 Features:
-- Set the jQuery URL to inject any version you want.
-- Specify websites and page patterns to automatically inject into.
-- Entry in context-menu to make injection even easier.
+
+- jQuery 3.6.4 is bundled with the extension.
+- Specify websites and page patterns for automatic injection.
+- Context-menu entry to make injection even more convenient.
 
 ### Details
-jQuery URL
-A non-protocol encoded URL to the version of jQuery you want to use. A list can be found here.
 
-Always Inject
-Can either be a full URL (e.g., https://www.google.com) or part of a URL (e.g., "test" would match https://www.google.com/test, http://www.test.com, etc.). jQuery will be automatically injected after the DOM completes.
+**Always Inject**: Can either be a full URL (e.g., https://www.google.com) or part of a URL (e.g., "test" would
+match https://www.google.com/test, http://www.test.com, etc.). jQuery will be automatically injected after the DOM
+completes.
+
+**Context Menu**: Right-click on a page and select "Inject jQuery" to inject jQuery into the current frame.
 
 ### Notes
-Firewalls (like uMatrix) will block jQuery from loading until you allow code.jquery.com to load scripts on that domain.
+
+Thanks to [attilathedud](https://github.com/attilathedud) for the original jQueryInjector extension.
 Background by Carlos Aguilar.
