@@ -1,53 +1,138 @@
 body {
-	background: url('../imgs/background.png');
-	margin-top: 8%;
+    background: url("../imgs/background.png");
+    margin-top: 8%;
 }
 
 body label {
-	color: #d3d3d3;
+    color: #d3d3d3;
 }
 
 #inject {
-	min-width: 175px;
+    min-width: 175px;
 }
 
 body table td {
-	color: #d3d3d3;
+    color: #d3d3d3;
 }
 
 tbody tr:first-child {
-	border-bottom: 1px solid #E1E1E1;
+    border-bottom: 1px solid #e1e1e1;
 }
 
 tbody td {
-	border-bottom: 0px solid;
+    border-bottom: 0px solid;
 }
 
 td:first-child {
-	width: 90%;
+    width: 90%;
 }
 
 img {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 #URLTable {
-	width: 100%;
-	table-layout: fixed;
+    width: 100%;
+    table-layout: fixed;
 }
 
 .always-inject-list {
-	max-height: 360px; 
-	overflow: scroll;
+    width: 100% !important;
+    max-height: 360px !important; /* Fixed height */
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    box-sizing: border-box !important;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+    margin-bottom: 1rem !important; /* Override Skeleton's 2.5rem */
+    display: block; /* Force block display */
 }
 
 .about-text {
-	border-radius: 4px;
-    border: 1px solid #bbb;
+    border-radius: 4px;
+    border: 1px solid #bbbbbb;
     padding: 5px;
     color: #d3d3d3;
 }
 
 .small-margin-top {
-	margin-top: 5%;
+    margin-top: 5%;
+}
+
+/* Minimal fix for table overflow */
+.always-inject-list {
+    overflow: visible;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.always-inject-list table {
+    width: 100% !important;
+    table-layout: fixed !important;
+    border-collapse: collapse !important;
+    margin: 0 !important; /* Override Skeleton's margin */
+    box-sizing: border-box !important;
+}
+
+.always-inject-list td {
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    box-sizing: border-box !important;
+    padding: 8px 12px !important; /* Override Skeleton's 12px 15px */
+    border-bottom: 1px solid #e1e1e1 !important;
+}
+
+/* Column widths */
+.always-inject-list td:first-child {
+    width: 85% !important;
+    padding-left: 12px !important; /* Override Skeleton's 0 padding */
+}
+
+.always-inject-list td:last-child {
+    width: 15% !important;
+    text-align: center !important;
+    padding-right: 12px !important; /* Override Skeleton's 0 padding */
+}
+
+/* Style the header row differently */
+.always-inject-list tr:first-child td {
+    font-weight: bold !important;
+    background-color: #f8f8f8 !important;
+    border-bottom: 2px solid #e1e1e1 !important;
+}
+
+/* Fix image sizing in delete column */
+.always-inject-list img {
+    max-width: 32px !important;
+    max-height: 32px !important;
+    display: block !important;
+    margin: 0 auto !important;
+    cursor: pointer !important;
+}
+
+/* Add some breathing room */
+.small-margin-top {
+    margin-bottom: 1rem !important; /* Override Skeleton's default */
+}
+
+/* Responsive adjustments */
+@media (max-width: 550px) {
+    .always-inject-list {
+        max-height: 150px; /* Smaller height on mobile */
+    }
+    
+    .always-inject-list td:first-child {
+        width: 75%;
+    }
+    
+    .always-inject-list td:last-child {
+        width: 25%;
+    }
+}
+
+/* Ensure no floating issues from Skeleton grid */
+.always-inject-list::after {
+    content: "";
+    display: table;
+    clear: both;
 }
