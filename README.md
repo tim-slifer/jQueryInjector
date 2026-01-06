@@ -2,14 +2,14 @@
 
 ![Settings screenshot](/promos/promo_1.png?raw=true "Settings")
 
-[Chrome Web Store](https://chrome.google.com/webstore/detail/jquery-injector/ekkjohcjbjcjjifokpingdbdlfekjcgi "Chrome Web Store")
+Available in
+the [Chrome Web Store](https://chromewebstore.google.com/detail/jquery-injector/oppdlcofmkabpeajbghgdbklpkbjlolk "Chrome Web Store")
 
 ### About
 
 jQuery Injector injects jQuery onto each frame of a page, making jQuery available and usable in the dev console. QA
 Engineers crafting and testing CSS Selectors with Sizzle/jQuery pseudo-classes for test automation, as well as
-developers doing sandbox work, may find
-this tool useful.
+developers doing sandbox work, may find this tool useful.
 
 Features:
 
